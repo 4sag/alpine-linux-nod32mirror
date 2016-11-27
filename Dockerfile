@@ -4,6 +4,7 @@ RUN apk update && apk upgrade && apk add bash wget curl git unrar
 RUN git clone https://github.com/tarampampam/nod32-update-mirror.git
 RUN mkdir -p /root/scripts
 RUN mkdir -p /root/nod32mirror
+RUN mkdir -p /var/log/nod32-mirror
 RUN mv ./nod32-update-mirror/nod32-mirror /root/scripts
 RUN mv ./nod32-update-mirror/webroot /root/nod32mirror
 COPY settings.conf /root/scripts/nod32-mirror/conf.d/default.conf
