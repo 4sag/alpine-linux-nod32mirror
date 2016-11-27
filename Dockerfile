@@ -13,3 +13,5 @@ RUN find /root/scripts -type f -name '*.sh' -exec chmod +x {} \;
 
 RUN rm -Rf /nod32-update-mirror/
 
+CMD ["crond", "-f"]
+
