@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade && apk add bash wget curl git unrar supervisor
-
+RUN apk update && apk upgrade && apk add bash wget curl git unrar
 RUN git clone https://github.com/tarampampam/nod32-update-mirror.git
 RUN mkdir -p /root/scripts
 RUN mkdir -p /root/nod32mirror
