@@ -12,3 +12,4 @@ COPY nod32-mirror.sh /root/scripts/nod32-mirror/include/nod32-mirror.sh
 RUN find /root/scripts -type f -name '*.sh' -exec chmod +x {} \;
 
 RUN rm -Rf /nod32-update-mirror/
+
