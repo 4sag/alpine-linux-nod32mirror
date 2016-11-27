@@ -15,6 +15,4 @@ RUN rm -Rf /nod32-update-mirror/
 
 RUN (crontab -l ; echo "0 */3 * * * root /var/log/nod32-mirror/nod32-mirror.sh --update >> /var/log/nod32-mirror/log.txt") | crontab -
 
-RUN touch /var/log/nod32-mirror/log.txt
-
 CMD ["crond"]
