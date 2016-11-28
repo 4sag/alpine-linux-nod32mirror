@@ -22,7 +22,7 @@
 
 # Declare important variables
 export NOD32MIRROR_VERSION="1.0.1.8";
-[[ -z $NOD32MIRROR_BASE_DIR ]] && export NOD32MIRROR_BASE_DIR=/root/scripts/nod32-mirror);
+[[ -z $NOD32MIRROR_BASE_DIR ]] && export NOD32MIRROR_BASE_DIR=/root/scripts/nod32-mirror;
 
 # Execute bootstrap script
 source "$NOD32MIRROR_BASE_DIR/include/bootstrap.sh" || { echo "[FATAL ERROR] Bootstrap file not found or contains errors" && exit 1; };
