@@ -14,7 +14,7 @@ RUN find /root/scripts -type f -name '*.sh' -exec chmod +x {} \;
 
 RUN rm -Rf /nod32-update-mirror/
 
-RUN crontab -l | { cat; echo "0 */3 * * * /var/log/nod32-mirror/nod32-mirror.sh -u >> /var/log/nod32-mirror/log.txt"; } | crontab -
+RUN crontab -l | { cat; echo "0 */3 * * * /root/scripts/nod32-mirror/nod32-mirror.sh -u >> /var/log/nod32-mirror/log.txt"; } | crontab -
 
 CMD ["crond", "-f"]
 
