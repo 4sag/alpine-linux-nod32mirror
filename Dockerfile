@@ -7,11 +7,8 @@ ENV TIMEZONE  Asia/Yekaterinburg
 RUN apk update && apk upgrade && apk add bash wget curl git unrar tzdata
 RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo "${TIMEZONE}" > /etc/timezone && apk del tzdata
 RUN git clone https://github.com/tarampampam/nod32-update-mirror.git
-RUN mkdir -p /root/scripts
-RUN mkdir -p /root/nod32mirror
-RUN mkdir -p /var/log/nod32-mirror
-RUN mv ./nod32-update-mirror/nod32-mirror /root/scripts
-RUN mv ./nod32-update-mirror/webroot /root/nod32mirror
+RUN mkdir -p /root/scripts && mkdir -p /root/nod32mirror && mkdir -p /var/log/nod32-mirror
+RUN mv ./nod32-update-mirror/nod32-mirror /root/scripts && mv ./nod32-update-mirror/webroot /root/nod32mirror
 COPY settings.conf /root/scripts/nod32-mirror/conf.d/default.conf
 COPY bootstrap.sh /root/scripts/nod32-mirror/include/bootstrap.sh
 COPY nod32-mirror.sh /root/scripts/nod32-mirror/nod32-mirror.sh
