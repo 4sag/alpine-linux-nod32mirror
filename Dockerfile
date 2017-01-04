@@ -1,6 +1,9 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade && apk add bash wget curl git unrar
+ENV TIMEZONE  Asia/Yekaterinburg
+
+RUN apk update && apk upgrade && apk add bash wget curl git unrar tzdata
+RUN cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo "${TIMEZONE}" > /etc/timezone
 RUN git clone https://github.com/tarampampam/nod32-update-mirror.git
 RUN mkdir -p /root/scripts
 RUN mkdir -p /root/nod32mirror
@@ -17,4 +20,3 @@ RUN rm -Rf /nod32-update-mirror/
 RUN crontab -l | { cat; echo "0 */3 * * * /root/scripts/nod32-mirror/nod32-mirror.sh -u >> /var/log/nod32-mirror/log.txt"; } | crontab -
 
 CMD ["crond", "-f"]
-
