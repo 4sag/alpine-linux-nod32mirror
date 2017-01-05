@@ -1,6 +1,4 @@
-[![](https://images.microbadger.com/badges/image/4sag/alpine-linux-nod32mirror.svg)](https://microbadger.com/images/4sag/alpine-linux-nod32mirror "Get your own image badge on microbadger.com")
-
-[![](https://images.microbadger.com/badges/version/4sag/alpine-linux-nod32mirror.svg)](https://microbadger.com/images/4sag/alpine-linux-nod32mirror "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/4sag/alpine-linux-nod32mirror.svg)](https://microbadger.com/images/4sag/alpine-linux-nod32mirror "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/4sag/alpine-linux-nod32mirror.svg)](https://microbadger.com/images/4sag/alpine-linux-nod32mirror "Get your own image badge on microbadger.com")
 
 #nod32mirror
 
