@@ -17,6 +17,7 @@ RUN find /root/scripts -type f -name '*.sh' -exec chmod +x {} \;
 VOLUME /root/nod32mirror
 
 RUN rm -Rf /nod32-update-mirror/
+RUN rm /var/cache/apk/*
 
 RUN crontab -l | { cat; echo "0 */3 * * * /root/scripts/nod32-mirror/nod32-mirror.sh -u >> /var/log/nod32-mirror/log.txt"; } | crontab -
 
